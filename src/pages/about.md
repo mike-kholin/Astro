@@ -2,6 +2,14 @@
 layout: ../layouts/Layout.astro
 ---
 
-#sandwhich
+# About sndwch
 
-In conclusion, sandwiches are a culinary delight that offers a wide range of flavors, endless customization options, and convenient portability. Whether you're a fan of classic combinations or enjoy experimenting with unique ingredients, sandwiches are a versatile and delicious choice. So next time you're looking for a quick and tasty meal, don't forget about the humble sandwich!
+The history of sndwch is the history of all of us, really. Who among us hasn’t set bravely forth to challenge the boundaries that limited those who came before us? Who hasn’t felt the call to shed the senseless burdens of previous generations and embrace a brighter, happier, more unified future?
+
+At sndwch, we believe in bringing people together. The overly restrictive labels of our past have divided us for too long.
+
+Forget the labels. You don’t need to stand alone. Explore a new world of joyful, unburdened flavors.
+
+Because when you’re here, just about everything can be a sandwich.
+
+Join us. [Shop now &rarr;](/shop)
