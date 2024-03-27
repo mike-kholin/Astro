@@ -1,0 +1,76 @@
+---
+function formatNumber(amount:number){
+    return new Intl.NumberFormat('eng-us',{
+        style:"currency",
+        currency:"usd",
+        maximumFractionDigits:2
+    }).format(amount)
+}
+const results = await fetch("https://astro-frontend-masters-api.netlify.app/api/products")
+
+if(!results.ok){
+    console.error(results)
+}
+
+interface ShopItem {
+  image: { src: string };
+  title: string;
+  description: string;
+  price: number;
+}
+
+const shopItems:ShopItem[]  = await results.json()
+--- 
+
+<section class="shop-items">
+    {
+        shopItems.map((item)=>{
+            return (
+                <div class="item">
+                    <img src={item.image.src}/>    
+                    <h2>{item.title}</h2>   
+                    <p>{item.description}</p>
+                    <p class="price">{formatNumber(item.price)}</p>             
+                </div>
+            )
+        })
+    }
+
+</section>
+<style>
+    .shop-items {
+	display: flex;
+	gap: 3rem 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 2rem 0;
+}
+
+.item {
+	width: 250px;
+}
+
+.item img {
+	aspect-ratio: 1;
+	border-radius: 10px;
+	display: block;
+	width: 100%;
+}
+
+.item h2 {
+	font-size: 1.125rem;
+	margin: 0.75rem 0 0;
+}
+
+.item p {
+	margin: 0.25rem 0 0;
+    font-size: small;
+    color: black;
+    font-weight: 600;
+}
+.item .price{
+    text-decoration: underline;
+    color:red;
+    font-weight: bold;
+}
+</style>
