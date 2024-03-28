@@ -5,30 +5,28 @@ import { Cart } from "../components/cart";
 ---
 
 <Layout>
-
-    <div class="shop">
-        <h1>Sandwich shop kits</h1>
-        <noscript>
-            <p>javascript is required to purchase things.Please email us for help. </p>
-        </noscript>
-        <div class="products">
-            <ShopItem/>
-            <Cart client:only="solid-js" />
-        </div>
+  <div class="shop">
+    <h1>Sandwich shop kits</h1>
+    <noscript>
+      <p>javascript is required to purchase things.Please email us for help.</p>
+    </noscript>
+    <div class="products">
+      <ShopItem addtocart={false} />
+      <Cart client:only="solid-js" />
     </div>
-
+  </div>
 </Layout>
 
 <style>
-    .shop {
-	padding: 3rem 5%;
-}
+  .shop {
+    padding: 3rem 5%;
+  }
 
-.products {
-	align-items: flex-start;
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: 1fr 260px;
-	position: relative;
-}
+  .products {
+    align-items: flex-start;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 260px;
+    position: relative;
+  }
 </style>
